@@ -1,8 +1,8 @@
 class Narrate < Formula
   desc "Provider-agnostic TTS gateway and CLI for AI coding harnesses"
   homepage "https://github.com/felores/narrate"
-  url "https://github.com/felores/narrate/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "623d4f1ce7e3132a7e17baf3a93eedc3e1e01e75833973c5b5e7f5c5e908fc78"
+  url "https://github.com/felores/narrate/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "4d158ad6547ea05055708f37ff6614e98a1861197dcec1bb3623ec474a3cbf52"
   license "MIT"
   head "https://github.com/felores/narrate.git", branch: "main"
 
@@ -46,6 +46,7 @@ class Narrate < Formula
           export OPENAI_API_KEY=...
           export GEMINI_API_KEY=...
           export XAI_API_KEY=...
+          export FISH_AUDIO_API_KEY=...
 
       Voicebox provider auto-detects http://127.0.0.1:17493 (no key needed).
       System provider (macOS `say`) needs no config.

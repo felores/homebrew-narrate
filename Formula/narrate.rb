@@ -2,7 +2,7 @@ class Narrate < Formula
   desc "Provider-agnostic TTS gateway and CLI for AI coding harnesses"
   homepage "https://github.com/felores/narrate"
   url "https://github.com/felores/narrate/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "d97f5fd3306a17c07e36975ef0f85bf59389909cbc5dc46c60d3fc1d4c6b565f"
+  sha256 "95052de7eba362aaef763e2c67c8272392f5ab99384a63ec6f4506bd166044e2"
   license "MIT"
   head "https://github.com/felores/narrate.git", branch: "main"
 

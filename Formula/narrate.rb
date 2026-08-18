@@ -1,15 +1,15 @@
 class Narrate < Formula
   desc "Provider-agnostic TTS gateway and CLI for AI coding harnesses"
   homepage "https://github.com/felores/narrate"
-  url "https://github.com/felores/narrate/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "95052de7eba362aaef763e2c67c8272392f5ab99384a63ec6f4506bd166044e2"
+  url "https://github.com/felores/narrate/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "006067a885be3508e53f6dcd5954b7206a58d44544a109d41a495b11f6b90853"
   license "MIT"
   head "https://github.com/felores/narrate.git", branch: "main"
 
   depends_on "bun"
 
   def install
-    bun = Formula["bun"].opt_bin/"bun"
+    bun = formula_opt_bin("bun")/"bun"
 
     # Install JS deps before copying source into libexec.
     system bun, "install", "--frozen-lockfile"
@@ -40,12 +40,13 @@ class Narrate < Formula
   def caveats
     <<~CAVEATS
       narrate needs API keys for the cloud providers you want to use.
-      Add any subset of these to your ~/.env or shell init:
+      Add any subset of these to your ~/.env:
 
           export ELEVENLABS_API_KEY=...
           export OPENAI_API_KEY=...
           export GEMINI_API_KEY=...
           export XAI_API_KEY=...
+          export SONIOX_API_KEY=...
           export FISH_AUDIO_API_KEY=...
 
       Voicebox provider auto-detects http://127.0.0.1:17493 (no key needed).
